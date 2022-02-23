@@ -1,0 +1,324 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+div.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+
+/*HEADER*/
+
+
+header div.top-header h2{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+header div.logo,
+header div.top-header .form {
+    width: 50%;
+}
+
+header div.logo{
+    padding: 5px;
+    max-width: 200px;
+    flex-grow: 1;
+}
+
+header nav{
+    display: none;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+header ul {
+    justify-content: space-between;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+header .top-header .form {
+    display: flex;
+    flex-grow: 1;
+    max-height: 40px;
+}
+.form input {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    flex-grow: 1;
+}
+
+.form input:focus-within {
+    outline: none;
+}
+.form button {
+    border: none;
+    border-left: 1px solid #ebebeb;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+.fa-search {
+    padding: 10px;
+    color: #666;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+
+/*MAIN*/
+
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 0.3 ease;
+}
+
+main section article:hover i {
+    transform: rotate(-90deg);
+}
+main section div article a{
+    text-decoration: none;
+    color: inherit;
+}
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+
+/*FOOTER*/
+
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px 20px;
+    text-align: center;
+    background-color:#fff;
+    gap: 2rem;
+}
+
+.contenido-footer{
+    text-align: center;
+    flex: 1 1;
+    flex-grow: 1;
+    flex-basis: 0%;
+    flex-shrink: 1;
+}
+
+footer i{
+    font-size: 24px;
+    color: #0044AA;
+    margin-bottom: 10px;
+    transition: color 0.3 ease;
+}
+
+footer i:hover {
+    color: #0022AA;
+}
+footer h4 {
+    font-size: 16px;
+    color: #666;
+    margin: 0px 0px 10px;
+}
+footer p{
+    color: #666;
+}
+.copy {
+    text-align: left;
+    background-color:#fff;
+    padding: 40px 10px 20px;
+}
+
+
+/*MEDIA QUERY*/
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+    }
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    article:hover .description{
+        opacity: 1;
+    }
+
+
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+    header nav {
+        display: flex;
+        justify-content: space-between; 
+    }
+    .main-nav ul{
+        display: flex;
+        flex-grow: 1;
+    }
+    header nav ul li a {
+        padding: 4px;
+        display: inline-block;
+    }
+    header .burger-menu {
+        display: none;
+    }
+
+    footer div {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+    header nav ul li a {
+        padding: 10px;
+        }
+    .top-header {
+        justify-content: space-between;
+    }
+    header div.logo, header div.top-header .form {
+        width: 35%;
+    }
+    header div.top-header h2{
+        width: 30%;
+    }
+}

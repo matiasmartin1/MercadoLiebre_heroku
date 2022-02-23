@@ -1,0 +1,37 @@
+form input.button {
+    height: 3em;
+    width: 90%;
+    margin: 20px 0;
+    padding-left: 2% ;
+    border: none;
+    border-radius: 6px;
+}
+/*Formualrios avanzados*/
+
+.profile, .interests div{
+    margin: 20px 10px;
+}
+.profile label, .interests label {
+   margin: 0 20px;
+
+} 
+/* Archivos*/
+
+.archivos {
+    margin-top: 20px;
+}
+/*submit y reset */
+main input.botones {
+    background-color: #1259c3;
+    color: #FFF;
+    width: 30%;
+    height: 3em;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3 ease;
+    cursor: pointer;
+}
+
+.botones:hover {
+    background-color: #0022AA;
+}
